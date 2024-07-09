@@ -1,0 +1,1 @@
+First part is to migrate all the groups and objects. Everything for this part is placed in "groups and objects" folder.
