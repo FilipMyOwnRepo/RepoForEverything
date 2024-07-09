@@ -1,1 +1,14 @@
+MIGRATING GROUPS AND OBJECTS 
+
 First part is to migrate all the groups and objects. Everything for this part is placed in "groups and objects" folder.
+You MUST have 2 files: commands_output.txt and income_rules.txt literally the same name either the code won't work. 
+Otherwise change it in the code (lines 9 and 10).
+
+In the "income_rules.txt" file you can put group name in one line and then IP one by one, row by row (check this file).
+Group must contain less then 101 characters or it must be changed in the code (line 22).
+
+Be aware to put one empty line after the last IP in the group (like in income_rules.txt file). The code is searching
+the last line and it won't work if you forget about it.
+
+As well, be aware that you can delete characters for the Group ":" and the IPs "  - " in the code: lines 22 (group), 
+30 and 44 (for IPs). I had the same yaml file as put: "example.yml" so I created the code like this.

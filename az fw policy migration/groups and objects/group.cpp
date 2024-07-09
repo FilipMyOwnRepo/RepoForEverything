@@ -6,7 +6,7 @@
 using namespace std;
 
 int main() {
-    ifstream file("income_rules.txt");  //all the 
+    ifstream file("income_rules.txt");  //put group and IP
     ofstream commands("commands_output");
 
     char line[256];
@@ -19,7 +19,7 @@ int main() {
     while (file.getline(line, sizeof(line))) {
         char group_name[50];
         
-        if (sscanf_s(line, "%100", group_name, sizeof(group_name)) == 1 && first_line == 1) {
+        if (sscanf_s(line, "%100[^:]", group_name, sizeof(group_name)) == 1 && first_line == 1) {
             fw_address_group = group_name;
         }
 
@@ -27,7 +27,7 @@ int main() {
         char ip1[18], ip2[18];
         int mask = 0;
 
-        if (sscanf_s(line, "%15[^-]-%15s", ip1, sizeof(ip1), ip2, sizeof(ip2)) == 2 && first_line != 1) { //ako je range
+        if (sscanf_s(line, "  - %15[^-]-%15s", ip1, sizeof(ip1), ip2, sizeof(ip2)) == 2 && first_line != 1) { //ako je range
 
             commands << "config firewall address" << endl;
             commands << "edit r-" << ip1 << "-" << ip2 << endl;
