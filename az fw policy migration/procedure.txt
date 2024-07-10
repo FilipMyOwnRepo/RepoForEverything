@@ -5,7 +5,8 @@ You MUST have 2 files: commands_output.txt and income_rules.txt literally the sa
 Otherwise change it in the code (lines 9 and 10).
 
 In the "income_rules.txt" file you can put group name in one line and then IP one by one, row by row (check this file).
-Group must contain less then 101 characters or it must be changed in the code (line 22).
+Group must contain less then 101 characters or it must be changed in the code (line 22). As well, "income_rules.txt" 
+file must contain less then 100 lines. 
 
 Be aware to put one empty line after the last IP in the group (like in income_rules.txt file). The code is searching
 the last line and it won't work if you forget about it. At the end, please put 2-3 empty lines. It happens that code
@@ -16,4 +17,16 @@ As well, be aware that you can delete characters for the Group ":" and the IPs "
 
 After debbuging the code the pop-up window (command prompt) will show all the IPs (that code read). With this, I was
 checking if the code is working fine. Except: if there is a range, it won't be outputted!
+
+You just need to put all these commands to the FortiGate and... voila... all the the objects and groups are there!
+--------------------------------------------------------------------------------------------------------------------
+Exporting the policy
+
+Next step is to export the policy from Azure firewall. I found the PowerShell script on the internet:
+Link: https://github.com/proximagr/automation/blob/master/Export%20Azure%20Firewall%20Policy%20Rules.ps1
+You can find this script in the folder "export policy" as well.
+
+
+
+
 

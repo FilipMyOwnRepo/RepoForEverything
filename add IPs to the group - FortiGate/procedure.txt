@@ -1,5 +1,6 @@
 In the "income_rules.txt" file you can put group name in one line and then IP one by one, row by row (check 
 "income_rules.txt" file). Group must contain less then 101 characters or it must be changed in the code (line 22).
+As well, hole file must contain less then 100 lines. 
 
 After putting the name of the group and all the IPs, make an empty line! The code is searching the empty line and it 
 won't work if you forget about it. At the end, please put 2-3 empty lines. It happens that code doesn't read until 
