@@ -27,7 +27,24 @@ Link: https://github.com/proximagr/automation/blob/master/Export%20Azure%20Firew
 You can find this script in the folder "export policy" as well.
 
 If it is not working, check "troubleshooting.txt" file under "export policy" folder.
+
+At the end, file called "rule" should be in c:\temp
 ---------------------------------------------------------------------------------------------------------------------
+If in the excel file everything is in the column A, you can change it with this:
+ - Mark column A
+ - Go to "Data"
+ - Go to "Text to Column"
+ - Mark "Delimited"
+ - Mark checkbox "Comma"
+ - Click "Finish"
+Now everything should be in the separated column.
+---------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
 
 
 
