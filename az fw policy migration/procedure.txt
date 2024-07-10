@@ -8,7 +8,12 @@ In the "income_rules.txt" file you can put group name in one line and then IP on
 Group must contain less then 101 characters or it must be changed in the code (line 22).
 
 Be aware to put one empty line after the last IP in the group (like in income_rules.txt file). The code is searching
-the last line and it won't work if you forget about it.
+the last line and it won't work if you forget about it. At the end, please put 2-3 empty lines. It happens that code
+doesn't read until the last line of code. 
 
 As well, be aware that you can delete characters for the Group ":" and the IPs "  - " in the code: lines 22 (group), 
 30 and 44 (for IPs). I had the same yaml file as put: "example.yml" so I created the code like this.
+
+After debbuging the code the pop-up window (command prompt) will show all the IPs (that code read). With this, I was
+checking if the code is working fine.
+
