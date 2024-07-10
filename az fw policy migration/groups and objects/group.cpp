@@ -7,7 +7,7 @@ using namespace std;
 
 int main() {
     ifstream file("income_rules.txt");  //put group and IP
-    ofstream commands("commands_output");
+    ofstream commands("commands_output"); //output of commands
 
     char line[256];
     string ip_addresses[100], fw_address_group;
@@ -16,10 +16,10 @@ int main() {
     int first_line = 1;
     string new_mask = "";
 
-    while (file.getline(line, sizeof(line))) {
+    while (file.getline(line, sizeof(line))) { //reading the line one by one
         char group_name[50];
         
-        if (sscanf_s(line, "%100[^:]", group_name, sizeof(group_name)) == 1 && first_line == 1) {
+        if (sscanf_s(line, "%100[^:]", group_name, sizeof(group_name)) == 1 && first_line == 1) { //group in the first line
             fw_address_group = group_name;
         }
 
@@ -27,9 +27,9 @@ int main() {
         char ip1[18], ip2[18];
         int mask = 0;
 
-        if (sscanf_s(line, "  - %15[^-]-%15s", ip1, sizeof(ip1), ip2, sizeof(ip2)) == 2 && first_line != 1) { //ako je range
+        if (sscanf_s(line, "  - %15[^-]-%15s", ip1, sizeof(ip1), ip2, sizeof(ip2)) == 2 && first_line != 1) { //reading the IPs, if it is the range
 
-            commands << "config firewall address" << endl;
+            commands << "config firewall address" << endl; //commands that will be put on FortiGate
             commands << "edit r-" << ip1 << "-" << ip2 << endl;
             commands << "set type iprange" << endl;
             commands << "set start-ip " << ip1 << endl;
@@ -42,11 +42,11 @@ int main() {
             cout << ip1 << "-" << ip2 << endl;
         }
         else {
-            if (sscanf_s(line, "  - %15s", ip, sizeof(ip)) == 1 && first_line != 1) {// ako je host ili network
+            if (sscanf_s(line, "  - %15s", ip, sizeof(ip)) == 1 && first_line != 1) { //IP is host or network
                 ip_addresses[ip_index++] = ip;
 
-                if (sscanf_s(ip, "%15[^/]/%2d", address, sizeof(address), &mask, sizeof(mask)) == 2) { //npr. ip = 192.168.40.0/21
-                    switch (mask) {
+                if (sscanf_s(ip, "%15[^/]/%2d", address, sizeof(address), &mask, sizeof(mask)) == 2) { //IP is network, e.g ip = 192.168.40.0/21
+                    switch (mask) {  //switch for mask
                     case 32:
                         new_mask = "255.255.255.255";
                         break;
@@ -125,10 +125,10 @@ int main() {
                     commands << "end" << "\n";
                 }
 
-                else { // ip = 192.168.40.24
+                else { //the only left, IP is host e.g. 192.168.0.1
                     commands << "config firewall address" << endl;
                     commands << "edit h-" << ip << endl;
-                    commands << "set subnet " << ip << " 255.255.255.255" << "\n";//dodano 255.255.255.255
+                    commands << "set subnet " << ip << " 255.255.255.255" << "\n"; //addition for th host
                     commands << "end" << endl;
                     commands << "config firewall addrgrp" << endl;
                     commands << "edit" << " " + fw_address_group << endl;
@@ -136,7 +136,7 @@ int main() {
                     commands << "end" << "\n";
                 }
 
-                cout << ip_addresses[ip_index - 1] << endl; //range se ne ispisuje pri cout
+                cout << ip_addresses[ip_index - 1] << endl; //range won't be on the output
             }
         }
 

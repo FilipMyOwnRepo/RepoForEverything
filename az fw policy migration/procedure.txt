@@ -15,5 +15,5 @@ As well, be aware that you can delete characters for the Group ":" and the IPs "
 30 and 44 (for IPs). I had the same yaml file as put: "example.yml" so I created the code like this.
 
 After debbuging the code the pop-up window (command prompt) will show all the IPs (that code read). With this, I was
-checking if the code is working fine.
+checking if the code is working fine. Except: if there is a range, it won't be outputted!
 
