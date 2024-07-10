@@ -39,8 +39,33 @@ If in the excel file everything is in the column A, you can change it with this:
  - Click "Finish"
 Now everything should be in the separated column.
 ---------------------------------------------------------------------------------------------------------------------
+WORKING WITH EXCEL AND NOTEPAD++
 
+I picked up Notepad++ as I like it and it was easier for me, but actually everything could be done only in Excel.
+Mostly everything in this step is "Find and Replace" thing.
 
+First find and replace in Excel is:
+/subscriptions/*/resourceGroups/<RG name>/providers/Microsoft.Network/<file name>/<group name> -> ""
+======================================================================================================================
+CREATING SOURCE AND DESTINATION IPS ON FortiGate
+
+If we want to use source and destination IPs on FortiGate in the policy or to add them in the group, we need to create
+them first as the objects.
+
+The procedure is the same for both columns, but I will just mention the source IPs. 
+
+Creating (this part is not covering the ranges so they must be rechecked and created separately !):
+ - Copy the column Source IPs to the Notepad++
+ - Find and replace: "," -> "\n"
+ - Find and replace: " " -> ""
+ - Find and replace: "\r\n\r\n" -> ""
+ - Delete everything but IPs (e.g. "*" or "SourceAddresses"). You can do as well find and replace: "*" -> ""
+ - Recheck the hole file again if there are any mistakes. Every IP needs to be in the separated row
+ - Check the folder "migrating IPs" and file "IP_procedure.txt" 
+ - When you have the commands from "source_commands.txt" file, "shoot" them on FortiGate. You can do it as commands or
+ do like script import
+
+ Now all the source IPs are created on FortiGate. Same part of the procedure is for destination IPs. 
 
 
 
