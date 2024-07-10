@@ -19,7 +19,7 @@ After debbuging the code the pop-up window (command prompt) will show all the IP
 checking if the code is working fine. Except: if there is a range, it won't be outputted!
 
 You just need to put all these commands to the FortiGate and... voila... all the the objects and groups are there!
---------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------
 Exporting the policy
 
 Next step is to export the policy from Azure firewall. I found the PowerShell script on the internet:
@@ -29,7 +29,7 @@ You can find this script in the folder "export policy" as well.
 If it is not working, check "troubleshooting.txt" file under "export policy" folder.
 
 At the end, file called "rule" should be in c:\temp
----------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------
 If in the excel file everything is in the column A, you can change it with this:
  - Mark column A
  - Go to "Data"
@@ -38,7 +38,7 @@ If in the excel file everything is in the column A, you can change it with this:
  - Mark checkbox "Comma"
  - Click "Finish"
 Now everything should be in the separated column.
----------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------
 WORKING WITH EXCEL AND NOTEPAD++
 
 I picked up Notepad++ as I like it and it was easier for me, but actually everything could be done only in Excel.
@@ -46,7 +46,7 @@ Mostly everything in this step is "Find and Replace" thing.
 
 First find and replace in Excel is:
 /subscriptions/*/resourceGroups/<RG name>/providers/Microsoft.Network/<file name>/<group name> -> ""
-======================================================================================================================
+=======================================================================================================================
 CREATING SOURCE AND DESTINATION IPS ON FortiGate
 
 If we want to use source and destination IPs on FortiGate in the policy or to add them in the group, we need to create
@@ -66,7 +66,7 @@ Creating (this part is not covering the ranges so they must be rechecked and cre
  do like script import
 
  Now all the source IPs are created on FortiGate. Same part of the procedure is for destination IPs. 
-
+=======================================================================================================================
 
 
 
