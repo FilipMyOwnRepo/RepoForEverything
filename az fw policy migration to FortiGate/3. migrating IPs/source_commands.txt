@@ -1,0 +1,72 @@
+config firewall address
+edit n-10.0.0.0_11
+set subnet 10.0.0.0 255.224.0.0
+end
+config firewall address
+edit n-10.1.0.0_16
+set subnet 10.1.0.0 255.255.0.0
+end
+config firewall address
+edit n-10.3.0.0_13
+set subnet 10.3.0.0 255.248.0.0
+end
+config firewall address
+edit n-10.32.32.0_19
+set subnet 10.32.32.0 255.255.224.0
+end
+config firewall address
+edit n-192.131.104.0_22
+set subnet 192.131.104.0 255.255.252.0
+end
+config firewall address
+edit n-10.23.0.0_16
+set subnet 10.23.0.0 255.255.0.0
+end
+config firewall address
+edit n-10.11.128.0_17
+set subnet 10.11.128.0 255.255.128.0
+end
+config firewall address
+edit n-192.168.0.0_16
+set subnet 192.168.0.0 255.255.0.0
+end
+config firewall address
+edit n-10.132.0.0_16
+set subnet 10.132.0.0 255.255.0.0
+end
+config firewall address
+edit n-10.1.0.0_15
+set subnet 10.1.0.0 255.254.0.0
+end
+config firewall address
+edit n-10.13.0.0_16
+set subnet 10.13.0.0 255.255.0.0
+end
+config firewall address
+edit n-10.0.0.0_12
+set subnet 10.0.0.0 255.240.0.0
+end
+config firewall address
+edit n-192.168.0.0_15
+set subnet 192.168.0.0 255.254.0.0
+end
+config firewall address
+edit n-172.17.0.0_23
+set subnet 172.17.0.0 255.255.254.0
+end
+config firewall address
+edit h-192.168.1.1
+set subnet 192.168.1.1 255.255.255.255
+end
+config firewall address
+edit h-172.17.2.3
+set subnet 172.17.2.3 255.255.255.255
+end
+config firewall address
+edit h-10.0.0.123
+set subnet 10.0.0.123 255.255.255.255
+end
+config firewall address
+edit h-10.42.5.2
+set subnet 10.42.5.2 255.255.255.255
+end

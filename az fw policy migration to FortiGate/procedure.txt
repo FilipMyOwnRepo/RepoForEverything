@@ -67,6 +67,39 @@ Creating (this part is not covering the ranges so they must be rechecked and cre
 
  Now all the source IPs are created on FortiGate. Same part of the procedure is for destination IPs. 
 =======================================================================================================================
+ADDING THE "h-" AND "n-" TO THE IPS TO BE USED IN THE POLICY
+
+In the next step is to add on all source and destination IPs "h-" and "n-". In the previous step we created
+all the source and destination IPs on the FortiGate with the names like e.g. 
+IP: 10.0.0.1 (host)  -> Name: h-10.0.0.1
+IP: 10.0.0.0/16 (network)  -> Name: n-10.0.0.0/16
+
+This part of the procedure is most "find and replace" work:
+ - Put all the IPs in one file (as "source.txt" file from 3. migrating IPs part od the procedure)
+ - To delete all the commas: find and replace "," replace with ""
+ - Do find: "\b(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\b" with "Regular expression" and "matchs newline". This 
+ will find all the IP in the file (x.x.x.x). Replace it with "h-\1"
+ - Now all the IPs (both hosts and networks) have "h-" ahead
+ Next part is only to change "h-" to "n-" in networks
+ - Find "\b(\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3}/\d{1,2}?)\b" (finding all the networks in the file - x.x.x.x/x)
+ and replace with "n-\1"
+ - Now all the networks have "h-n-"
+ - The prelast step is to do find and replace "h-n-" with "n-". Now all the hosts and networks have their 
+ prefixes
+ - Last step: do find and replace "/" and "_". We created all the networks on FortiGate like x.x.x.x_x and not
+ like x.x.x.x/x!
+
+Sources:
+Now, copy the hole file in A column in Excel sheet. From the original excel file, copy the column with source groups
+to the B column (new excel sheet). In the C column do: =CONCATENATE(A1;B1) and do ti for all rows in A and B 
+columns. 
+Do find and replace: "," -> ""
+Copy this C column to the totally new excel. There we will create hole file. It should look like "example.xlsx" excel file.
+
+Destinations:
+Do the same procedure for destination IPs. 
+=======================================================================================================================
+
 
 
 
