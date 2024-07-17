@@ -1,0 +1,168 @@
+config firewall service custom
+edit s-TCP-25
+set tcp-portrange 25
+end
+config firewall service custom
+edit s-UDP-25
+set udp-portrange 25
+end
+config firewall service custom
+edit s-TCP-53
+set tcp-portrange 53
+end
+config firewall service custom
+edit s-UDP-53
+set udp-portrange 53
+end
+config firewall service custom
+edit s-TCP-3269
+set tcp-portrange 3269
+end
+config firewall service custom
+edit s-UDP-3269
+set udp-portrange 3269
+end
+config firewall service custom
+edit s-TCP-49150-65535
+set tcp-portrange 49150-65535
+end
+config firewall service custom
+edit s-UDP-49150-65535
+set udp-portrange 49150-65535
+end
+config firewall service custom
+edit s-TCP-123
+set tcp-portrange 123
+end
+config firewall service custom
+edit s-UDP-123
+set udp-portrange 123
+end
+config firewall service custom
+edit s-TCP-53
+set tcp-portrange 53
+end
+config firewall service custom
+edit s-UDP-53
+set udp-portrange 53
+end
+config firewall service custom
+edit s-UDP-1194
+set udp-portrange 1194
+end
+config firewall service custom
+edit s-UDP-2114
+set udp-portrange 2114
+end
+config firewall service custom
+edit s-UDP-111
+set udp-portrange 111
+end
+config firewall service custom
+edit s-UDP-222
+set udp-portrange 222
+end
+config firewall service custom
+edit s-TCP-161
+set tcp-portrange 161
+end
+config firewall service custom
+edit s-UDP-161
+set udp-portrange 161
+end
+config firewall service custom
+edit s-TCP-22
+set tcp-portrange 22
+end
+config firewall service custom
+edit s-UDP-22
+set udp-portrange 22
+end
+config firewall service custom
+edit s-TCP-1431
+set tcp-portrange 1431
+end
+config firewall service custom
+edit s-UDP-1431
+set udp-portrange 1431
+end
+config firewall service custom
+edit s-TCP-443
+set tcp-portrange 443
+end
+config firewall service custom
+edit s-TCP-443
+set tcp-portrange 443
+end
+config firewall service custom
+edit s-TCP-443
+set tcp-portrange 443
+end
+config firewall service custom
+edit s-TCP-22
+set tcp-portrange 22
+end
+config firewall service custom
+edit s-TCP-1437
+set tcp-portrange 1437
+end
+config firewall service custom
+edit s-TCP-1437
+set tcp-portrange 1437
+end
+config firewall service custom
+edit s-TCP-1571
+set tcp-portrange 1571
+end
+config firewall service custom
+edit s-TCP-1333
+set tcp-portrange 1333
+end
+config firewall service custom
+edit s-TCP-5555
+set tcp-portrange 5555
+end
+config firewall service custom
+edit s-TCP-1431
+set tcp-portrange 1431
+end
+config firewall service custom
+edit s-TCP-445
+set tcp-portrange 445
+end
+config firewall service custom
+edit s-TCP-22
+set tcp-portrange 22
+end
+config firewall service custom
+edit s-TCP-55
+set tcp-portrange 55
+end
+config firewall service custom
+edit s-TCP-123
+set tcp-portrange 123
+end
+config firewall service custom
+edit s-TCP-553
+set tcp-portrange 553
+end
+config firewall service custom
+edit s-UDP-80
+set udp-portrange 80
+end
+config firewall service custom
+edit s-UDP-123
+set udp-portrange 123
+end
+config firewall service custom
+edit s-TCP-80
+set tcp-portrange 80
+end
+config firewall service custom
+edit s-TCP-80
+set tcp-portrange 80
+end
+config firewall service custom
+edit s-TCP-123
+set tcp-portrange 123
+end

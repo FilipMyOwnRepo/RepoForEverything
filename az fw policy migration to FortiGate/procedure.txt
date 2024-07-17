@@ -99,10 +99,80 @@ Copy this C column to the totally new excel. There we will create hole file. It 
 Destinations:
 Do the same procedure for destination IPs. 
 =======================================================================================================================
+COMMENTS
 
+ - Copy column for comments in the new excel sheet
+ - Do find and replace: " " -> ""
+ - This is "must" because, if you leave comments, FortiGate won't accept it
+ - Copy column to the "final" excel (like in "example.xlsx")
+=======================================================================================================================
+PORT AND PROTOCOLS
 
+First create ICMP pair echo request and echo reply. This part is not covered in the C++ program. You can do it similar
+like this below:
 
+FortiGate # show firewall service custom echo-request 
+config firewall service custom
+edit "echo-request"
+set protocol ICMP
+set comment "ICMP, echo request"
+set color 21
+set icmptype 8
+unset icmpcode
+next
+end
 
+FortiGate # show firewall service custom echo-reply 
+config firewall service custom
+edit "echo-reply"
+set protocol ICMP
+set comment "ICMP, echo reply"
+set color 21
+set icmptype 0
+unset icmpcode
+next
+end
 
+Then put the hole policy in the "input.txt" file under "4 port and protocols" folder and debug the "port_protocols.cpp" file.
 
+There are two files: commands.txt and protokols.txt
+
+1. In the "protokols.txt" you will have one by one all the port protocols pairs that are used in the policy. Copy this file and put it in the excel
+(like in the "example.xlsx").
+2. In the "commands.txt" file are the commands for creating these pairs port-protocol. Run this script on FortiGate. 
+
+Be aware that if you have somewhere "*" you need to fill up "ALL" manually.
+=======================================================================================================================
+CREATING FINAL script
+
+Now, when you have hole excel file, it is time to create final script. Copy hole file in the notepad.
+Next step is to do find/replace again in the Notepad++ to get the final policy. 
+
+When you copy everything from the excel file to Notepad++, you should have the same thing like in "final policy 1.txt".
+
+Before continuing make sure that Regular expression is selected in Notepad++ finder:
+ - Now select exactly like this "	set srcintf "any	" one character after "edti 1" and until the last character before "set dstintf "any"".
+ - Do find and replace for: "	set srcintf "any	" -> "\nset srcintf "any""
+ - Now do the same for the next command: find and replace for "set dstintf "any"	" -> "\nset dstintf "any""
+ - Next is find and replace for: "set srcaddr	" -> "\nset srcaddr "
+ etc etc... continue this for all. Find and replace: 
+ - "	set dstaddr	" -> "\nset dstaddr "
+ - "	set service	" -> "\nset service "
+ - " 	set schedule always	" -> "\nset schedule always\n"
+ - "	set status enable	" -> "\nset status enable\n"
+ - "	set comments	" -> "\nset comments "
+ - "	next" -> "\nnext"
+
+Now you have the script for creating the final policy!!!
+"Shoot" this on FortiGate and voila!
+
+The script should look like "final policy 2.txt" under "5. final policy" folder.
+
+Final note:
+In my policy, comments weren't that complex. If you have some complex comments be aware that FortiGate doesn't accept the neither " " nor
+"'" and something similar. You can start the script on the FortiGate and check if there are some issues and errors. To avoid this you can 
+easily in your final script do find and replace for all of these things, e.g.:
+" " - > ""
+"'" -> ""
+etc...
 

@@ -1,0 +1,603 @@
+  - name: rule1
+    priority: 1
+    ruleCollectionType: FirewallPolicyFilterRuleCollection
+    action:
+      type: Allow
+    rules:
+      - ruleType: NetworkRule
+        name: rule1
+        ipProtocols:
+          - TCP
+          - UDP
+          - ICMP
+        sourceAddresses: []
+        sourceIpGroups:
+		  - group1
+        destinationAddresses: []
+        destinationIpGroups:
+		  - group1
+        destinationFqdns: []
+        destinationPorts:
+          - 8
+          - 25
+          - 53
+
+      - ruleType: rule2
+        name: rule2
+        ipProtocols:
+          - TCP
+          - UDP
+          - ICMP
+        sourceAddresses: []
+        sourceIpGroups:
+		  - group2
+        destinationAddresses: []
+        destinationIpGroups:
+		  - group2
+        destinationFqdns: []
+        destinationPorts:
+          - 8
+          - 3269
+          - 49150-65535
+
+  - name: rule3
+    priority: 2
+    ruleCollectionType: FirewallPolicyFilterRuleCollection
+    action:
+      type: Allow
+    rules:
+      - ruleType: NetworkRule
+        name: rule3
+        ipProtocols:
+          - TCP
+          - UDP
+        sourceAddresses: []
+        sourceIpGroups:
+		  - group3
+        destinationAddresses: ['*']
+        destinationIpGroups: []
+        destinationFqdns: []
+        destinationPorts:
+          - 123
+
+  - name: rule4
+    priority: 3
+    ruleCollectionType: FirewallPolicyFilterRuleCollection
+    action:
+      type: Allow
+    rules:
+      - ruleType: NetworkRule
+        name: rule4
+        ipProtocols:
+          - TCP
+          - UDP
+        sourceAddresses: ['*']
+        sourceIpGroups: []
+        destinationAddresses: []
+        destinationIpGroups:
+		  - group3
+        destinationFqdns: []
+        destinationPorts:
+          - 53
+
+  - name: rule5
+    priority: 4
+    ruleCollectionType: FirewallPolicyFilterRuleCollection
+    action:
+      type: Allow
+    rules:
+      - ruleType: NetworkRule
+        name: rule5
+        ipProtocols:
+          - UDP
+        sourceAddresses: []
+        sourceIpGroups:
+		  - group4
+        destinationAddresses: []
+        destinationIpGroups:
+		  - group4
+        destinationFqdns: []
+        destinationPorts:
+          - 1194
+          - 2114
+
+  - name: rule6
+    priority: 5
+    ruleCollectionType: FirewallPolicyFilterRuleCollection
+    action:
+      type: Allow
+    rules:
+      - ruleType: NetworkRule
+        name: rule6
+        ipProtocols:
+          - UDP
+        sourceAddresses: []
+        sourceIpGroups:
+		  - group5
+        destinationAddresses: []
+        destinationIpGroups: 
+		  - group5
+        destinationFqdns: []
+        destinationPorts:
+          - 111
+		  - 222
+
+  - name: rule7
+    priority: 6
+    ruleCollectionType: FirewallPolicyFilterRuleCollection
+    action:
+      type: Allow
+    rules:
+      - ruleType: NetworkRule
+        name: rule7
+        ipProtocols:
+          - UDP
+          - TCP
+          - ICMP
+        sourceAddresses:
+		  - 192.168.1.1
+        sourceIpGroups: []
+        destinationAddresses: []
+        destinationIpGroups:
+		  - group6
+        destinationFqdns: []
+        destinationPorts:
+          - 8
+          - 161
+
+  - name: rule8
+    priority: 7
+    ruleCollectionType: FirewallPolicyFilterRuleCollection
+    action:
+      type: Allow
+    rules:
+      - ruleType: NetworkRule
+        name: rule8
+        ipProtocols:
+          - UDP
+          - TCP
+          - ICMP
+        sourceAddresses: []
+        sourceIpGroups:
+		  - group6
+        destinationAddresses:
+		  - 192.168.1.1
+        destinationIpGroups: []
+        destinationFqdns: []
+        destinationPorts:
+          - 22
+		  - 1431
+
+  - name: rule9
+    priority: 8
+    ruleCollectionType: FirewallPolicyFilterRuleCollection
+    action:
+      type: Allow
+    rules:
+      - ruleType: NetworkRule
+        name: rule9
+        ipProtocols:
+          - UDP
+		  - TCP
+		  - ICMP
+        sourceAddresses: []
+        sourceIpGroups:
+		  - group7
+        destinationAddresses: []
+        destinationIpGroups: ['*']
+        destinationFqdns: []
+        destinationPorts: 
+		  - 445
+
+  - name: rule10
+    priority: 9
+    ruleCollectionType: FirewallPolicyFilterRuleCollection
+    action:
+      type: Allow
+    rules:
+      - ruleType: NetworkRule
+        name: rule10
+        ipProtocols:
+          - TCP
+        sourceAddresses: 
+		  - 172.17.1.0/24
+		  - 172.17.2.0/25
+        sourceIpGroups: []
+        destinationAddresses: []
+        destinationIpGroups: 
+		  - group7
+        destinationFqdns: []
+        destinationPorts:
+          - 443
+
+  - name: rule11
+    priority: 10
+    ruleCollectionType: FirewallPolicyFilterRuleCollection
+    action:
+      type: Allow
+    rules:
+      - ruleType: NetworkRule
+        name: rule11
+        ipProtocols:
+          - TCP
+        sourceAddresses: 
+		  - 172.17.2.0/24
+        sourceIpGroups: []
+        destinationAddresses: []
+        destinationIpGroups:
+		  - group8
+        destinationFqdns: []
+        destinationPorts:
+          - 443
+
+  - name: rule12
+    priority: 11
+    ruleCollectionType: FirewallPolicyFilterRuleCollection
+    action:
+      type: Allow
+    rules:
+      - ruleType: NetworkRule
+        name: rule12
+        ipProtocols:
+          - TCP
+        sourceAddresses: []
+        sourceIpGroups:
+		  - group8
+        destinationAddresses: []
+        destinationIpGroups: 
+		  - group9
+        destinationFqdns: []
+        destinationPorts:
+          - 443
+
+  - name: rule13
+    priority: 12
+    ruleCollectionType: FirewallPolicyFilterRuleCollection
+    action:
+      type: Allow
+    rules:
+      - ruleType: NetworkRule
+        name: rule13
+        ipProtocols:
+          - TCP
+        sourceAddresses: []
+        sourceIpGroups: 
+		  - group9
+        destinationAddresses: []
+        destinationIpGroups: 
+		  - group10
+        destinationFqdns: []
+        destinationPorts:
+          - 22
+
+  - name: rule14
+    priority: 13
+    ruleCollectionType: FirewallPolicyFilterRuleCollection
+    action:
+      type: Allow
+    rules:
+      - ruleType: NetworkRule
+        name: rule14
+        ipProtocols:
+          - TCP
+        sourceAddresses: 
+		  - 10.0.0.0/24
+        sourceIpGroups: []
+        destinationAddresses: []
+        destinationIpGroups: 
+		  - group11
+        destinationFqdns: []
+        destinationPorts:
+          - 1437
+
+  - name: rule15
+    priority: 14
+    ruleCollectionType: FirewallPolicyFilterRuleCollection
+    action:
+      type: Allow
+    rules:
+      - ruleType: NetworkRule
+        name: rule15
+        ipProtocols:
+          - TCP
+        sourceAddresses:
+          - 10.10.0.0/24
+        sourceIpGroups: []
+        destinationAddresses:
+          - 192.168.192.55
+        destinationIpGroups: []
+        destinationFqdns: []
+        destinationPorts:
+          - 1437
+
+  - name: rule16
+    priority: 15
+    ruleCollectionType: FirewallPolicyFilterRuleCollection
+    action:
+      type: Allow
+    rules:
+      - ruleType: NetworkRule
+        name: rule16
+        ipProtocols:
+          - TCP
+        sourceAddresses:
+          - 10.100.2.0/29
+        sourceIpGroups: []
+        destinationAddresses:
+          - 192.168.182.182
+        destinationIpGroups: []
+        destinationFqdns: []
+        destinationPorts:
+          - 1571
+
+  - name: rule17
+    priority: 16
+    ruleCollectionType: FirewallPolicyFilterRuleCollection
+    action:
+      type: Allow
+    rules:
+      - ruleType: NetworkRule
+        name: rule17
+        ipProtocols:
+          - TCP
+        sourceAddresses:
+          - 10.0.0.0/25
+        sourceIpGroups: []
+        destinationAddresses:
+          - 192.168.1.1
+		  - 10.12.2.2
+        destinationIpGroups: []
+        destinationFqdns: []
+        destinationPorts:
+          - 1333
+
+  - name: rule18
+    priority: 17
+    ruleCollectionType: FirewallPolicyFilterRuleCollection
+    action:
+      type: Allow
+    rules:
+      - ruleType: NetworkRule
+        name: rule18
+        ipProtocols:
+          - TCP
+        sourceAddresses:
+          - 10.10.0.0/25
+        sourceIpGroups: []
+        destinationAddresses:
+          - 10.14.10.10 
+		  - 10.12.12.12
+        destinationIpGroups: []
+        destinationFqdns: []
+        destinationPorts:
+          - 5555
+
+  - name: rule19
+    priority: 18
+    ruleCollectionType: FirewallPolicyFilterRuleCollection
+    action:
+      type: Allow
+    rules:
+      - ruleType: NetworkRule
+        name: rule19
+        ipProtocols:
+          - TCP
+        sourceAddresses:
+          - 10.100.2.0/30
+        sourceIpGroups: []
+        destinationAddresses:
+          - 192.168.40.23
+        destinationIpGroups: []
+        destinationFqdns: []
+        destinationPorts:
+          - 1431
+
+  - name: rule20
+    priority: 19
+    ruleCollectionType: FirewallPolicyFilterRuleCollection
+    action:
+      type: Allow
+    rules:
+      - ruleType: NetworkRule
+        name: rule20
+        ipProtocols:
+          - TCP
+        sourceAddresses:
+          - 10.0.0.0/26
+        sourceIpGroups: []
+        destinationAddresses:
+          - 10.13.24.24 
+		  - 10.12.12.12
+        destinationIpGroups: []
+        destinationFqdns: []
+        destinationPorts:
+          - 445
+
+  - name: rule21
+    priority: 20
+    ruleCollectionType: FirewallPolicyFilterRuleCollection
+    action:
+      type: Allow
+    rules:
+      - ruleType: NetworkRule
+        name: rule21
+        ipProtocols:
+          - TCP
+        sourceAddresses:
+          - 192.168.1.0/24
+        sourceIpGroups: []
+        destinationAddresses:
+          - 192.168.2.2
+        destinationIpGroups: []
+        destinationFqdns: []
+        destinationPorts:
+          - 22
+
+  - name: rule22
+    priority: 21
+    ruleCollectionType: FirewallPolicyFilterRuleCollection
+    action:
+      type: Allow
+    rules:
+      - ruleType: NetworkRule
+        name: rule22
+        ipProtocols:
+          - TCP
+        sourceAddresses:
+          - 192.168.1.0/25
+        sourceIpGroups: []
+        destinationAddresses:
+          - 192.168.3.3 
+		  - 192.168.4.4
+        destinationIpGroups: []
+        destinationFqdns: []
+        destinationPorts:
+          - 55
+
+  - name: rule23
+    priority: 22
+    ruleCollectionType: FirewallPolicyFilterRuleCollection
+    action:
+      type: Allow
+    rules:
+      - ruleType: NetworkRule
+        name: rule23
+        ipProtocols:
+          - TCP
+		  - UDP
+        sourceAddresses:
+          - 192.168.1.0/26
+        sourceIpGroups: []
+        destinationAddresses:
+          - 10.13.24.24 
+		  - 10.12.12.13
+        destinationIpGroups: []
+        destinationFqdns: []
+        destinationPorts:
+          - 123
+
+  - name: rule24
+    priority: 23
+    ruleCollectionType: FirewallPolicyFilterRuleCollection
+    action:
+      type: Allow
+    rules:
+      - ruleType: NetworkRule
+        name: rule24
+        ipProtocols:
+          - TCP
+        sourceAddresses:
+          - 10.88.12.8/30
+        sourceIpGroups: []
+        destinationAddresses:
+          - 192.168.2.3
+        destinationIpGroups: []
+        destinationFqdns: []
+        destinationPorts:
+          - 553
+
+  - name: rule25
+    priority: 24
+    ruleCollectionType: FirewallPolicyFilterRuleCollection
+    action:
+      type: Allow
+    rules:
+      - ruleType: NetworkRule
+        name: rule25
+        ipProtocols:
+          - UDP
+        sourceAddresses: []
+        sourceIpGroups:
+          - group10
+        destinationAddresses:
+          - 192.168.3.3 
+		  - 192.168.4.5
+        destinationIpGroups: []
+        destinationFqdns: []
+        destinationPorts:
+          - 80
+		  - 123
+
+  - name: rule26
+    priority: 25
+    ruleCollectionType: FirewallPolicyFilterRuleCollection
+    action:
+      type: Allow
+    rules:
+      - ruleType: NetworkRule
+        name: rule27
+        ipProtocols:
+          - TCP
+        sourceAddresses: []
+        sourceIpGroups: 
+		  - group11
+        destinationAddresses:
+          - 10.13.24.24 
+		  - 10.12.12.14
+        destinationIpGroups: []
+        destinationFqdns: []
+        destinationPorts:
+		  - 80
+
+  - name: rule27
+    priority: 26
+    ruleCollectionType: FirewallPolicyFilterRuleCollection
+    action:
+      type: Allow
+    rules:
+      - ruleType: NetworkRule
+        name: rule27
+        ipProtocols:
+          - TCP
+        sourceAddresses: []
+        sourceIpGroups:
+		  - group12
+        destinationAddresses:
+          - 192.168.17.13
+        destinationIpGroups: []
+        destinationFqdns: []
+        destinationPorts:
+          - 80
+
+  - name: rule28
+    priority: 27
+    ruleCollectionType: FirewallPolicyFilterRuleCollection
+    action:
+      type: Allow
+    rules:
+      - ruleType: NetworkRule
+        name: rule28
+        ipProtocols:
+          - TCP
+		  - UDP
+        sourceAddresses: []
+        sourceIpGroups:
+		  - group13
+        destinationAddresses:
+          - 10.10.10.10 
+		  - 192.168.192.192
+        destinationIpGroups: []
+        destinationFqdns: []
+        destinationPorts:
+          - 123
+
+  - name: rule29
+    priority: 28
+    ruleCollectionType: FirewallPolicyFilterRuleCollection
+    action:
+      type: Allow
+    rules:
+      - ruleType: NetworkRule
+        name: rule29
+        ipProtocols:
+          - ICMP
+        sourceAddresses: []
+        sourceIpGroups:
+		  - group14
+        destinationAddresses:
+          - 10.10.10.0/24
+        destinationIpGroups: []
+        destinationFqdns: []
+        destinationPorts:
+          - 8
+

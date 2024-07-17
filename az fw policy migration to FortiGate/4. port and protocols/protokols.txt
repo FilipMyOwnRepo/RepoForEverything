@@ -1,0 +1,31 @@
+echo-request echo-reply s-TCP-25 s-UDP-25 s-TCP-53 s-UDP-53 
+echo-request echo-reply s-TCP-3269 s-UDP-3269 s-TCP-49150-65535 s-UDP-49150-65535 
+s-TCP-123 s-UDP-123 
+s-TCP-53 s-UDP-53 
+s-UDP-1194 s-UDP-2114 
+s-UDP-111 s-UDP-222 
+echo-request echo-reply s-TCP-161 s-UDP-161 
+echo-request echo-reply s-TCP-22 s-UDP-22 s-TCP-1431 s-UDP-1431 
+ALL
+s-TCP-443 
+s-TCP-443 
+s-TCP-443 
+s-TCP-22 
+s-TCP-1437 
+s-TCP-1437 
+s-TCP-1571 
+s-TCP-1333 
+s-TCP-5555 
+s-TCP-1431 
+s-TCP-445 
+s-TCP-22 
+s-TCP-55 
+s-TCP-123 
+s-TCP-553 
+s-UDP-80 s-UDP-123 
+s-TCP-80 
+s-TCP-80 
+s-TCP-123 
+echo-request echo-reply 
+
+

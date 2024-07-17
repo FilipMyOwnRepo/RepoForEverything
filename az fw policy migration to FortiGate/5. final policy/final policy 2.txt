@@ -1,0 +1,346 @@
+edit 1
+set srcintf "any"
+set dstintf "any"
+set srcaddr	group1 
+set dstaddr	group1 
+set service echo-request echo-reply s-TCP-25 s-UDP-25 s-TCP-53 s-UDP-53 
+set schedule always	
+set logtraffic
+set status enable
+set action accept
+set comments comment1
+next
+edit 2
+set srcintf "any"
+set dstintf "any"
+set srcaddr group2
+set dstaddr group2
+set service echo-request echo-reply s-TCP-3269 s-UDP-3269 s-TCP-49150-65535 s-UDP-49150-65535
+set schedule always
+set logtraffic
+set status enable
+set action accept
+set comments comment2
+next
+edit 3
+set srcintf "any"
+set dstintf "any"
+set srcaddr group3
+set dstaddr all
+set service s-TCP-123 s-UDP-123
+set schedule always
+set logtraffic
+set status enable
+set action accept
+set comments comment3
+next
+edit 4
+set srcintf "any"
+set dstintf "any"
+set srcaddr all
+set dstaddr group3
+set service s-TCP-53 s-UDP-53
+set schedule always
+set logtraffic
+set status enable
+set action accept
+set comments comment4
+next
+edit 5
+set srcintf "any"
+set dstintf "any"
+set srcaddr group4
+set dstaddr group4
+set service s-UDP-1194 s-UDP-2114
+set schedule always
+set logtraffic
+set status enable
+set action accept
+set comments comment5
+next
+edit 6
+set srcintf "any"
+set dstintf "any"
+set srcaddr group5
+set dstaddr group5
+set service s-UDP-111 s-UDP-222
+set schedule always
+set logtraffic
+set status enable
+set action accept
+set comments comment6
+next
+edit 7
+set srcintf "any"
+set dstintf "any"
+set srcaddr h-192.168.1.1
+set dstaddr group6
+set service echo-request echo-reply s-TCP-161 s-UDP-161
+set schedule always
+set logtraffic
+set status enable
+set action accept
+set comments comment7
+next
+edit 8
+set srcintf "any"
+set dstintf "any"
+set srcaddr group6
+set dstaddr h-192.168.1.1
+set service echo-request echo-reply s-TCP-22 s-UDP-22 s-TCP-1431 s-UDP-1431
+set schedule always
+set logtraffic
+set status enable
+set action accept
+set comments comment8
+next
+edit 9
+set srcintf "any"
+set dstintf "any"
+set srcaddr group7
+set dstaddr all
+set service ALL	set schedule always	set logtraffic
+set status enable
+set action accept
+set comments comment9
+next
+edit 10
+set srcintf "any"
+set dstintf "any"
+set srcaddr n-172.17.1.0_24 n-172.17.2.0_25
+set dstaddr group7
+set service s-TCP-443
+set schedule always
+set logtraffic
+set status enable
+set action accept
+set comments comment10
+next
+edit 11
+set srcintf "any"
+set dstintf "any"
+set srcaddr n-172.17.2.0_24
+set dstaddr group8
+set service s-TCP-443
+set schedule always
+set logtraffic
+set status enable
+set action accept
+set comments comment11
+next
+edit 12
+set srcintf "any"
+set dstintf "any"
+set srcaddr group8
+set dstaddr group9
+set service s-TCP-443
+set schedule always
+set logtraffic
+set status enable
+set action accept
+set comments comment12
+next
+edit 13
+set srcintf "any"
+set dstintf "any"
+set srcaddr group9
+set dstaddr group10
+set service s-TCP-22
+set schedule always
+set logtraffic
+set status enable
+set action accept
+set comments comment13
+next
+edit 14
+set srcintf "any"
+set dstintf "any"
+set srcaddr n-10.0.0.0_24
+set dstaddr group11
+set service s-TCP-1437
+set schedule always
+set logtraffic
+set status enable
+set action accept
+set comments comment14
+next
+edit 15
+set srcintf "any"
+set dstintf "any"
+set srcaddr n-10.10.0.0_24
+set dstaddr h-192.168.192.55
+set service s-TCP-1437
+set schedule always
+set logtraffic
+set status enable
+set action accept
+set comments comment15
+next
+edit 16
+set srcintf "any"
+set dstintf "any"
+set srcaddr n-10.100.2.0_29
+set dstaddr h-192.168.182.182
+set service s-TCP-1571
+set schedule always
+set logtraffic
+set status enable
+set action accept
+set comments comment16
+next
+edit 17
+set srcintf "any"
+set dstintf "any"
+set srcaddr n-10.0.0.0_25
+set dstaddr h-192.168.1.1 h-10.12.2.2
+set service s-TCP-1333
+set schedule always
+set logtraffic
+set status enable
+set action accept
+set comments comment17
+next
+edit 18
+set srcintf "any"
+set dstintf "any"
+set srcaddr n-10.10.0.0_25
+set dstaddr h-10.14.10.10 h-10.12.12.12
+set service s-TCP-5555
+set schedule always
+set logtraffic
+set status enable
+set action accept
+set comments comment18
+next
+edit 19
+set srcintf "any"
+set dstintf "any"
+set srcaddr n-10.100.2.0_30
+set dstaddr h-192.168.40.23
+set service s-TCP-1431
+set schedule always
+set logtraffic
+set status enable
+set action accept
+set comments comment19
+next
+edit 20
+set srcintf "any"
+set dstintf "any"
+set srcaddr n-10.0.0.0_26
+set dstaddr h-10.13.24.24 h-10.12.12.12
+set service s-TCP-445
+set schedule always
+set logtraffic
+set status enable
+set action accept
+set comments comment20
+next
+edit 21
+set srcintf "any"
+set dstintf "any"
+set srcaddr n-192.168.1.0_24
+set dstaddr h-192.168.2.2
+set service s-TCP-22
+set schedule always
+set logtraffic
+set status enable
+set action accept
+set comments comment21
+next
+edit 22
+set srcintf "any"
+set dstintf "any"
+set srcaddr n-192.168.1.0_25
+set dstaddr h-192.168.3.3 h-192.168.4.4
+set service s-TCP-55
+set schedule always
+set logtraffic
+set status enable
+set action accept
+set comments comment22
+next
+edit 23
+set srcintf "any"
+set dstintf "any"
+set srcaddr n-192.168.1.0_26
+set dstaddr h-10.13.24.24 h-10.12.12.13
+set service s-TCP-123
+set schedule always
+set logtraffic
+set status enable
+set action accept
+set comments comment23
+next
+edit 24
+set srcintf "any"
+set dstintf "any"
+set srcaddr n-10.88.12.8_30
+set dstaddr h-192.168.2.3
+set service s-TCP-553
+set schedule always
+set logtraffic
+set status enable
+set action accept
+set comments comment24
+next
+edit 25
+set srcintf "any"
+set dstintf "any"
+set srcaddr group10
+set dstaddr h-192.168.3.3 h-192.168.4.5
+set service s-UDP-80 s-UDP-123
+set schedule always
+set logtraffic
+set status enable
+set action accept
+set comments comment25
+next
+edit 26
+set srcintf "any"
+set dstintf "any"
+set srcaddr group11
+set dstaddr h-10.13.24.24 h-10.12.12.14
+set service s-TCP-80
+set schedule always
+set logtraffic
+set status enable
+set action accept
+set comments comment26
+next
+edit 27
+set srcintf "any"
+set dstintf "any"
+set srcaddr group12
+set dstaddr h-192.168.17.13
+set service s-TCP-80
+set schedule always
+set logtraffic
+set status enable
+set action accept
+set comments comment27
+next
+edit 28
+set srcintf "any"
+set dstintf "any"
+set srcaddr group13
+set dstaddr h-10.10.10.10 h-192.168.192.192
+set service s-TCP-123
+set schedule always
+set logtraffic
+set status enable
+set action accept
+set comments comment28
+next
+edit 29
+set srcintf "any"
+set dstintf "any"
+set srcaddr group14
+set dstaddr n-10.10.10.0_24
+set service echo-request echo-reply
+set schedule always
+set logtraffic
+set status enable
+set action accept
+set comments comment29
+next
