@@ -42,7 +42,7 @@ Now everything should be in the separated column.
 
 - First find and replace in Excel is:
 /subscriptions/*/resourceGroups/<RG name>/providers/Microsoft.Network/<file name>/<group name> -> ""
-==============================================================================================================
+--------------------------------------------------------------------------------------------------------------
 # CREATING SOURCE AND DESTINATION IPS ON FortiGate
 
 - If we want to use source and destination IPs on FortiGate in the policy or to add them in the group, we need to create them first as the objects.
@@ -60,7 +60,7 @@ Creating (this part is not covering the ranges so they must be rechecked and cre
  - When you have the commands from "source_commands.txt" file, "shoot" them on FortiGate. You can do it as commands or do like script import
 
 - Now all the source IPs are created on FortiGate. Same part of the procedure is for destination IPs. 
-==============================================================================================================
+--------------------------------------------------------------------------------------------------------------
 # ADDING THE "h-" AND "n-" TO THE IPS TO BE USED IN THE POLICY
 
 - In the next step is to add on all source and destination IPs "h-" and "n-". In the previous step we created
@@ -90,14 +90,14 @@ This part of the procedure is most "find and replace" work:
 
 ## Destinations:
 - Do the same procedure for destination IPs. 
-==============================================================================================================
+--------------------------------------------------------------------------------------------------------------
 # COMMENTS
 
  - Copy column for comments in the new excel sheet
  - Do find and replace: " " -> ""
  - This is "must" because, if you leave comments, FortiGate won't accept it
  - Copy column to the "final" excel (like in "example.xlsx")
-==============================================================================================================
+--------------------------------------------------------------------------------------------------------------
 # PORT AND PROTOCOLS
 
 - First create ICMP pair echo request and echo reply. This part is not covered in the C++ program. You can do it similar like this below:
@@ -133,7 +133,7 @@ end
 2. In the "commands.txt" file are the commands for creating these pairs port-protocol. Run this script on FortiGate. 
 
 - Be aware that if you have somewhere "*" you need to fill up "ALL" manually.
-==============================================================================================================
+--------------------------------------------------------------------------------------------------------------
 # CREATING FINAL SCRIPT
 
 - Now, when you have hole excel file, it is time to create final script. Copy hole file in the notepad. Next step is to do find/replace again in the Notepad++ to get the final policy. 
