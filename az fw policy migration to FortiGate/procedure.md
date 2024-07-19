@@ -56,7 +56,7 @@ Creating (this part is not covering the ranges so they must be rechecked and cre
  - Find and replace: "\r\n\r\n" -> ""
  - Delete everything but IPs (e.g. "*" or "SourceAddresses"). You can do as well find and replace: "*" -> ""
  - Recheck the hole file again if there are any mistakes. Every IP needs to be in the separated row
- - Check the folder "migrating IPs" and file "IP_procedure.txt" 
+ - Check the folder "migrating IPs" and file "IP_procedure.md" 
  - When you have the commands from "source_commands.txt" file, "shoot" them on FortiGate. You can do it as commands or do like script import
 
 - Now all the source IPs are created on FortiGate. Same part of the procedure is for destination IPs. 
