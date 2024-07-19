@@ -1,3 +1,5 @@
+# Troubleshooting PowerShell
+
  - Run PowerShell as an Administrator
  - Try this command:
 Connect-AzAccount -UseDeviceAuthentication
