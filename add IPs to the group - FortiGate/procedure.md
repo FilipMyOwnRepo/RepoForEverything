@@ -1,4 +1,4 @@
-#Procedure
+# Procedure
 
 
 1. In the "income_rules.txt" file you can put group name in one line and then IP one by one, row by row (check 
