@@ -63,28 +63,27 @@ int main() {
 
         char port[6];
         if (sscanf_s(line, "          - %6s", port, sizeof(port)) == 1 && port_count == 1) {
-            if (tcp == 1 && strcmp(port, "8") != 0) { //koristi se TCP i pravi se sa portom koji se ucitava
+            if (tcp == 1 && strcmp(port, "8") != 0) { // it uses a TCP and makes it with used port
                 commands << "config firewall service custom" << endl;
                 commands << "edit s-TCP-" << port << endl;
                 commands << "set tcp-portrange " << port << endl;
                 commands << "end" << endl;
 
-                protokoli << "s-TCP-" << port << " "; //ono sto ide u Excel
+                protokoli << "s-TCP-" << port << " "; //what goes to excel (in protokols.txt)
             }
-            if (udp == 1 && strcmp(port, "8") != 0) { //koristi se UDP i pravi se sa portom koji se ucitava
+            if (udp == 1 && strcmp(port, "8") != 0) { // it uses a UDP and makes it with used port
                 commands << "config firewall service custom" << endl;
                 commands << "edit s-UDP-" << port << endl;
                 commands << "set udp-portrange " << port << endl;
                 commands << "end" << endl;
 
-                protokoli << "s-UDP-" << port << " "; //ono sto ide u Excel
+                protokoli << "s-UDP-" << port << " "; // what goes to excel (in protokols.txt)
             }
             cout << port << endl;
         }
 
         if (icmp == 1 && first_icmp == 1) {
-            //dodati u file protokoli
-            protokoli << "echo-request echo-reply "; //ono sto ide u Excel
+            protokoli << "echo-request echo-reply "; // what goes to excel (in protokols.txt)
             first_icmp = 0;
         }
 

@@ -18,7 +18,7 @@ int main()
         char ip[18], address[15];
         char ip1[18], ip2[18];
         int mask = 0;
-        if (sscanf_s(line, "%15[^-]-%15s", ip1, sizeof(ip1), ip2, sizeof(ip2)) == 2) { //ako je range
+        if (sscanf_s(line, "%15[^-]-%15s", ip1, sizeof(ip1), ip2, sizeof(ip2)) == 2) { //if it is a range
 
             commands << "config firewall address" << endl;
             commands << "edit r-" << ip1 << "-" << ip2 << endl;
@@ -29,9 +29,9 @@ int main()
             cout << ip1 << "-" << ip2 << endl;
         }
         else {
-            if (sscanf_s(line, "%18s", ip, sizeof(ip)) == 1) {// ako je host ili network
+            if (sscanf_s(line, "%18s", ip, sizeof(ip)) == 1) {// if it is a host or network
 
-                if (sscanf_s(ip, "%15[^/]/%2d", address, sizeof(address), &mask, sizeof(mask)) == 2) { //npr. ip = 192.168.40.0/21
+                if (sscanf_s(ip, "%15[^/]/%2d", address, sizeof(address), &mask, sizeof(mask)) == 2) { //e.g.. ip = 192.168.40.0/21
                     switch (mask) {
                     case 32:
                         new_mask = "255.255.255.255";
