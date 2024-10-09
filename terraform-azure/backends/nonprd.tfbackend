@@ -1,0 +1,4 @@
+resource_group_name  = "myrg"
+storage_account_name = "mysa"
+container_name       = "tfstate"
+key                  = "my.tfstate"

@@ -1,0 +1,2 @@
+storageAccountName = "mysa"
+storageAccountTier = "Standard"
