@@ -36,5 +36,5 @@ jobs:
         $tags = @("ApplicationID=1","ApplicationName=Azure Services","ApplicationOwner=azure","Provisioner=az cli")
         $jtags = $tags | ConvertTo-Json
         az group create -l westeurope -n myrg --tags $tags
-        #az storage account update --name mysa --resource-group myrg --public-network-access enabled
+        #az storage account update --name mysa --resource-group myrg
         #az storage container create -n tfstate --account-name mysa --auth-mode login
