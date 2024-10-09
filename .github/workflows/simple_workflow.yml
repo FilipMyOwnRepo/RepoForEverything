@@ -1,0 +1,16 @@
+name: simple-workflow
+on:
+    workflow_dispatch:
+jobs:
+    echo:
+        runs-on: ubuntu-latest
+        steps:
+        - name: Run echo
+          run: echo "Something tbw"
+
+    echo2:
+        runs-on: ubuntu-latest
+        needs: echo
+        steps:
+        - name: Run echo
+          run: echo "Something tbw"
