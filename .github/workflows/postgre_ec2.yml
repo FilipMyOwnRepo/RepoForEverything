@@ -42,7 +42,7 @@ jobs:
         INSERT INTO table1 (name, age) 
         VALUES 
         ('Nikola Mikic', 30),
-        ('Dzon Meklejn', 20),
+        ('Martina Viren', 20),
         ('Fridrih Bauel', 52),
         ('Milena Micic', 22),
         ('Nikolina Iskic', 25);"
