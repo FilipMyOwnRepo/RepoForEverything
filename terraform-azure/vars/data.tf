@@ -14,7 +14,7 @@ data "azuread_client_config" "current" {}
 
 data "azurerm_subscription" "current" {}
 
-data "azurerm_subnet" "subnet2" {
+data "azurerm_subnet" "mysubnet2" {
   name                 = "mysubnet"
   resource_group_name  = data.azurerm_resource_group.myrg.name
   virtual_network_name = data.azurerm_virtual_network.myvnet.name
