@@ -1,0 +1,14 @@
+Kreiranje SNS topica
+Na SNS, Create Subscriptions
+Kreira se Lambda f-ja : Lambda kod
+Protocol - Email, AWS Lambda - postavi se ARN koji se kopira iz AWS Lambda
+Provera Lambde - treba da se vidi da je dostupan SNS kao trigger
+Salje se poruka kada god Lambda f-ja objavi poruku u topic
+EventBridge (CloudWatch) - cronjob - svaki dan u 1 ujutru = 0 1 * * ? *
+
+Ako SNS padne, postoji delivery retry policy (default ili podesena)
+
+
+CloudWatch = Monitor
+Lambda = Azure Functions
+SNS = Service Bus
