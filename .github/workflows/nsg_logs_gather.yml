@@ -14,7 +14,7 @@ permissions:
 jobs:
   vnet-list:
     environment:
-      name: azurerm-auto
+      name: azure
     runs-on: ubuntu-latest
 
     steps:
