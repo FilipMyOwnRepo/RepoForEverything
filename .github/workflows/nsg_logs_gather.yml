@@ -1,0 +1,44 @@
+name: nsg_log_gathering
+on:
+  workflow_dispatch:
+    inputs:
+        env-file-path:
+            description: 'Environment variables for loggin'
+            required: true
+            #default: '<put the path to you env file>'
+
+permissions:
+ id-token: write
+ contents: read
+
+jobs:
+  vnet-list:
+    environment:
+      name: azurerm-auto
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Add env variables
+      run: cat ${{ <in the path> }} >>$GITHUB_ENV
+
+    - name: Az CLI login
+      uses: azure/login@v2
+      with:
+        client-id: ${{ <in the path> }}
+        tenant-id: ${{ <in the path> }}
+        subscription-id: ${{ <in the path> }}
+
+    - name: Script
+      shell: bash
+      run: |
+        python -m pip install --upgrade pip
+        pip install azure-identity azure-mgmt-network
+        chmod +x script.py
+        python script.py
+      env:
+        AZURE_TENANT_ID: ${{ <in the path> }}
+        AZURE_CLIENT_ID: ${{ <in the path> }}
+        AZURE_SUBSCRIPTION_ID: ${{ <in the path> }}
