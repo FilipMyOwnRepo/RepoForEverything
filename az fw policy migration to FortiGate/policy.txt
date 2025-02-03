@@ -1,6 +1,6 @@
   - name: rule1
     priority: 1
-    ruleCollectionType: FirewallPolicyFilterRuleCollection
+    ruleCollectionType: FirewallPolicy
     action:
       type: Allow
     rules:
@@ -42,7 +42,7 @@
 
   - name: rule3
     priority: 2
-    ruleCollectionType: FirewallPolicyFilterRuleCollection
+    ruleCollectionType: FirewallPolicy
     action:
       type: Allow
     rules:
@@ -62,7 +62,7 @@
 
   - name: rule4
     priority: 3
-    ruleCollectionType: FirewallPolicyFilterRuleCollection
+    ruleCollectionType: FirewallPolicy
     action:
       type: Allow
     rules:
@@ -82,7 +82,7 @@
 
   - name: rule5
     priority: 4
-    ruleCollectionType: FirewallPolicyFilterRuleCollection
+    ruleCollectionType: FirewallPolicy
     action:
       type: Allow
     rules:
@@ -103,7 +103,7 @@
 
   - name: rule6
     priority: 5
-    ruleCollectionType: FirewallPolicyFilterRuleCollection
+    ruleCollectionType: FirewallPolicy
     action:
       type: Allow
     rules:
@@ -124,7 +124,7 @@
 
   - name: rule7
     priority: 6
-    ruleCollectionType: FirewallPolicyFilterRuleCollection
+    ruleCollectionType: FirewallPolicy
     action:
       type: Allow
     rules:
@@ -147,7 +147,7 @@
 
   - name: rule8
     priority: 7
-    ruleCollectionType: FirewallPolicyFilterRuleCollection
+    ruleCollectionType: FirewallPolicy
     action:
       type: Allow
     rules:
@@ -170,7 +170,7 @@
 
   - name: rule9
     priority: 8
-    ruleCollectionType: FirewallPolicyFilterRuleCollection
+    ruleCollectionType: FirewallPolicy
     action:
       type: Allow
     rules:
@@ -191,7 +191,7 @@
 
   - name: rule10
     priority: 9
-    ruleCollectionType: FirewallPolicyFilterRuleCollection
+    ruleCollectionType: FirewallPolicy
     action:
       type: Allow
     rules:
@@ -212,7 +212,7 @@
 
   - name: rule11
     priority: 10
-    ruleCollectionType: FirewallPolicyFilterRuleCollection
+    ruleCollectionType: FirewallPolicy
     action:
       type: Allow
     rules:
@@ -232,7 +232,7 @@
 
   - name: rule12
     priority: 11
-    ruleCollectionType: FirewallPolicyFilterRuleCollection
+    ruleCollectionType: FirewallPolicy
     action:
       type: Allow
     rules:
@@ -252,7 +252,7 @@
 
   - name: rule13
     priority: 12
-    ruleCollectionType: FirewallPolicyFilterRuleCollection
+    ruleCollectionType: FirewallPolicy
     action:
       type: Allow
     rules:
@@ -272,7 +272,7 @@
 
   - name: rule14
     priority: 13
-    ruleCollectionType: FirewallPolicyFilterRuleCollection
+    ruleCollectionType: FirewallPolicy
     action:
       type: Allow
     rules:
@@ -292,7 +292,7 @@
 
   - name: rule15
     priority: 14
-    ruleCollectionType: FirewallPolicyFilterRuleCollection
+    ruleCollectionType: FirewallPolicy
     action:
       type: Allow
     rules:
@@ -312,7 +312,7 @@
 
   - name: rule16
     priority: 15
-    ruleCollectionType: FirewallPolicyFilterRuleCollection
+    ruleCollectionType: FirewallPolicy
     action:
       type: Allow
     rules:
@@ -332,7 +332,7 @@
 
   - name: rule17
     priority: 16
-    ruleCollectionType: FirewallPolicyFilterRuleCollection
+    ruleCollectionType: FirewallPolicy
     action:
       type: Allow
     rules:
@@ -353,7 +353,7 @@
 
   - name: rule18
     priority: 17
-    ruleCollectionType: FirewallPolicyFilterRuleCollection
+    ruleCollectionType: FirewallPolicy
     action:
       type: Allow
     rules:
@@ -374,7 +374,7 @@
 
   - name: rule19
     priority: 18
-    ruleCollectionType: FirewallPolicyFilterRuleCollection
+    ruleCollectionType: FirewallPolicy
     action:
       type: Allow
     rules:
@@ -394,7 +394,7 @@
 
   - name: rule20
     priority: 19
-    ruleCollectionType: FirewallPolicyFilterRuleCollection
+    ruleCollectionType: FirewallPolicy
     action:
       type: Allow
     rules:
@@ -415,7 +415,7 @@
 
   - name: rule21
     priority: 20
-    ruleCollectionType: FirewallPolicyFilterRuleCollection
+    ruleCollectionType: FirewallPolicy
     action:
       type: Allow
     rules:
@@ -435,7 +435,7 @@
 
   - name: rule22
     priority: 21
-    ruleCollectionType: FirewallPolicyFilterRuleCollection
+    ruleCollectionType: FirewallPolicy
     action:
       type: Allow
     rules:
@@ -456,7 +456,7 @@
 
   - name: rule23
     priority: 22
-    ruleCollectionType: FirewallPolicyFilterRuleCollection
+    ruleCollectionType: FirewallPolicy
     action:
       type: Allow
     rules:
@@ -478,7 +478,7 @@
 
   - name: rule24
     priority: 23
-    ruleCollectionType: FirewallPolicyFilterRuleCollection
+    ruleCollectionType: FirewallPolicy
     action:
       type: Allow
     rules:
@@ -498,7 +498,7 @@
 
   - name: rule25
     priority: 24
-    ruleCollectionType: FirewallPolicyFilterRuleCollection
+    ruleCollectionType: FirewallPolicy
     action:
       type: Allow
     rules:
@@ -520,7 +520,7 @@
 
   - name: rule26
     priority: 25
-    ruleCollectionType: FirewallPolicyFilterRuleCollection
+    ruleCollectionType: FirewallPolicy
     action:
       type: Allow
     rules:
@@ -541,7 +541,7 @@
 
   - name: rule27
     priority: 26
-    ruleCollectionType: FirewallPolicyFilterRuleCollection
+    ruleCollectionType: FirewallPolicy
     action:
       type: Allow
     rules:
@@ -561,7 +561,7 @@
 
   - name: rule28
     priority: 27
-    ruleCollectionType: FirewallPolicyFilterRuleCollection
+    ruleCollectionType: FirewallPolicy
     action:
       type: Allow
     rules:
@@ -583,7 +583,7 @@
 
   - name: rule29
     priority: 28
-    ruleCollectionType: FirewallPolicyFilterRuleCollection
+    ruleCollectionType: FirewallPolicy
     action:
       type: Allow
     rules:
