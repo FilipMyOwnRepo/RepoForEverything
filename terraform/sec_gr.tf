@@ -4,15 +4,14 @@ resource "security_group" "ec2_sg" {
 }
 
 #--------------- EC2
-#ingress, moja IP - (2 tipa - ingress, egress)
 resource "vpc_security_group_ingress_rule" "ssh_ingress" {
   security_group_id = security_group.ec2_sg.id
   from_port         = 22
   to_port           = 22
   protocol          = "tcp" 
-  cidr_blocks       = ["165.225.200.196/32"] #zavisno sa interneta (javna) ili iz VPC-a (privatna)
+  cidr_blocks       = ["123.123.123.123/32"] 
 }
-#bilo koja IP na http(s) za pristup, sve dostupne
+
 resource "vpc_security_group_ingress_rule" "http_ingress" {
   security_group_id = security_group.ec2_sg.id
   from_port         = 80
@@ -36,12 +35,11 @@ resource "vpc_security_group_egress_rule" "all_egress" {
 }
 
 #---------------
-#rule-ovi za RDS
 resource "security_group" "rds_sg" {
   vpc_id = vpc.custom_vpc.id
   rds_sg = local.rds_sg
 }
-#ingress i egress
+#ingress and egress
 resource "vpc_security_group_ingress_rule" "rds_ingress" {
   security_group_id        = security_group.rds_sg.id
   from_port                = 5432

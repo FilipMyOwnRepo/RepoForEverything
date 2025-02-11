@@ -7,15 +7,15 @@ resource "subnet" "custom_subnet" {
   vpc_id     = vpc.custom_vpc.id
   cidr_block = "10.0.1.0/24"
   #availability_zone = "..."
-  map_public_ip_on_launch = true #za assign public adresa
+  map_public_ip_on_launch = true 
 }
 
-resource "internet_gateway" "igw" { #enable approach internet
+resource "internet_gateway" "igw" { 
   vpc_id   = aws_vpc.custom_vpc.id 
   name_igw = local.name_igw
 }
 
-resource "route_table" "route_table" { #route towards internet
+resource "route_table" "route_table" { 
   vpc_id = vpc.custom_vpc.id
   route {
     cidr_block = "0.0.0.0/0"
