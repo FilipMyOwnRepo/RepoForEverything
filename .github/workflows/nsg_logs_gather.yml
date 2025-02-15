@@ -13,8 +13,6 @@ permissions:
 
 jobs:
   vnet-list:
-    environment:
-      name: azure
     runs-on: ubuntu-latest
 
     steps:
