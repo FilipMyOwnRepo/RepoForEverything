@@ -65,7 +65,7 @@ logging.info(f"Current URL list len: {len(current_url_list)}")
 
 # get 1000 random urls from the current list
 random_urls = random.sample(current_url_list, 1000)
-print(f"random_urls")
+print(f'random_urls: {random_urls}')
 # add the random urls to the allow list
 # response = SESSION.post(
 #     f"http://{LOCAL_ENDPOINT}:{LOCAL_PORT}{ALLOW_LIST_PATH}", json=random_urls
