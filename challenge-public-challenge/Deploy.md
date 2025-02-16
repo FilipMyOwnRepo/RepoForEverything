@@ -15,7 +15,11 @@ docker ps -a
 /project/source/app_flask.py
 ```
 
-- Under /project/source/nginx/certs are certificates created for this purpose. Nginx configuration file is 
+- Under 
+```sh
+/project/source/nginx/certs
+```
+are certificates created for this purpose. Nginx configuration file is 
 ```sh
 /project/source/nginx/nginx.conf
 ```
