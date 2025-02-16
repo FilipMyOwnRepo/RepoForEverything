@@ -2,7 +2,7 @@
 
 ---
 
-- Deploy Docker containers with command
+- Deploy Docker containers:
 ```sh
 docker-compose up -d
 ```
@@ -10,11 +10,10 @@ docker-compose up -d
 ```sh
 docker ps -a
 ```
-- Containers will be created with underlying code from 
+- Containers will be created with underlying code from path with all necessary methods (POST and GET) for allowlist and denylist. Used methods are enabled via Flaks deployment.
 ```sh
 /project/source/app_flask.py
 ```
-with all necessary methods (POST and GET) for allowlist and denylist. Used methods are enabled via Flaks deployment.
 
 - Under /project/source/nginx/certs are certificates created for this purpose. Nginx configuration file is 
 ```sh
