@@ -2,7 +2,7 @@
 
 ---
 
-- Deployment of Docker containers with command
+- Deploy Docker containers with command
 
 docker-compose up -d
 
@@ -22,3 +22,10 @@ with all necessary methods (POST and GET) for allowlist and denylist. Used metho
 
 - Redirection of traffic from port 80 to 443 is in nginx.conf file
 
+- To verify healthcheck status of Docker containers use commands:
+
+docker-compose ps
+
+docker inspect --format='{{json .State.Health}}' <container_id>
+
+docker ps -a
