@@ -1,0 +1,51 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    networks:
+      - api-net
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./source:/source
+    environment:
+      - FLASK_ENV=development
+    depends_on:
+      - db
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost/denylist"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  db:
+    image: postgres:latest
+    restart: always
+    environment:
+      POSTGRES_DB: docker_task_db
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/source/nginx/nginx.conf
+      - ./certs:/source/nginx/certs
+    depends_on:
+      - web
+    networks:
+      - api-net
+
+volumes:
+  db_data:
+
+networks:
+  api-net:
+    driver: bridge
