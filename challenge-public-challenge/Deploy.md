@@ -10,7 +10,7 @@ docker-compose up -d
 ```sh
 docker ps -a
 ```
-- Containers will be created with underlying code from path with all necessary methods (POST and GET) for allowlist and denylist. Used methods are enabled via Flaks deployment.
+- Containers will be created with underlying code from path with all necessary methods (POST and GET) for allowlist and denylist. Used methods are enabled via Flaks deployment. As well, in the same folder is the file app_oop.py where code is written via Object Oriented programming in Python. 
 ```sh
 /project/source/app_flask.py
 ```
@@ -19,7 +19,7 @@ docker ps -a
 ```sh
 /project/source/nginx/certs
 ```
-are certificates created for this purpose. Nginx configuration file is 
+are certificates created for this purpose. I wrote the code for traefik in docker-compose file, but it is not used. Nginx configuration file is 
 ```sh
 /project/source/nginx/nginx.conf
 ```

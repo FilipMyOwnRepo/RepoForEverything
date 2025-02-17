@@ -17,4 +17,5 @@ EXPOSE 80
 
 # Command to run the application
 CMD ["python", "source/app_flask.py"]
+#CMD ["python", "source/app_oop.py"]
 #CMD ["python", "-c", '"import os; print(os.getlogin())"']

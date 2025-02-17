@@ -13,12 +13,14 @@ DENYLIST_FILE = 'denylist.txt'
 def load_allowlist():
     if os.path.exists(ALLOWLIST_FILE):
         with open(ALLOWLIST_FILE, 'r') as f:
+            print("Load allow list")
             return set(f.read().splitlines())
     return set()
 
 def save_allowlist(allowlist):
     with open(ALLOWLIST_FILE, 'w') as f:
         f.write('\n'.join(allowlist))
+        print("Save allow list")
 #----------------------------------------------
 # Deny list
 def load_denylist():
@@ -30,6 +32,7 @@ def load_denylist():
 def save_denylist(denylist):
     with open(DENYLIST_FILE, 'w') as f:
         f.write('\n'.join(denylist))
+        print("Save deny list")
 #----------------------------------------------
 
 allowlist = load_allowlist()
@@ -52,13 +55,13 @@ def post_allowlist():
     allowlist.update(urls) # URL in allow list
     save_allowlist(allowlist)
     return jsonify({"urls_added": urls})
-    print("#1 Post AllowList finished")
+    print("Post AllowList finished")
 
 #3 Get AllowList
 @app.route('/allowlist', methods=['GET'])
 def get_allowlist():
     return jsonify(list(allowlist)) # all in the allow list in json
-    print("#1 Get AllowList finished")
+    print("Get AllowList finished")
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=80)
